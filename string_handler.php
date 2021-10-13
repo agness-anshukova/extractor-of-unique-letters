@@ -26,6 +26,7 @@
 		}	
 
 		public function getUniqueLettersString() {
+			sort($this->uniqueLettersArray);
 			$uniqueLettersString = implode(",", $this->uniqueLettersArray);
 			return $uniqueLettersString;
 		}	
@@ -45,6 +46,7 @@
 			if($notLetter != false)
 				unset($uniqueLetters[$notLetter]);
 			
+		//	$uniqueLetters = sort($uniqueLetters);
 			$this->uniqueLettersArray = $uniqueLetters;
 	   	}
    	
